@@ -6,15 +6,16 @@ public class Student {
 	int age; // 나이
 	double height; // 키
 	double weight; // 몸무게
-
+	String major; // 전공
 	// (생성자) <- 필드의 초기값 지정
+
 	Student() {
 		// 인스턴스가 하나 만들어 질 때, 처리들을 미리한다????????
 		System.out.println("생성자 호출.");
 	}
 
 	Student(String name) {
-		this.name = name; //필드의 정의되어져 있는 ???????? 뭔가를 가르킴...???????????
+		this.name = name; // this 는 필드의 정의되어져 있는 객체를 가르킴..
 	}
 
 	// (기능) -> 메소드
