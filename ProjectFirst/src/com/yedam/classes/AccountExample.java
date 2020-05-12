@@ -8,7 +8,7 @@ public class AccountExample {
 		Account[] accounts = new Account[100];
 		while (true) { // 사용자가 정지할 때 까지무한반복시키기..
 			System.out.println("-----------------------------------");
-			System.out.println("1.계좌생성  2.계좌목록  3.예금  4.출금   5.종료");
+			System.out.println("1.계좌생성  2.계좌목록  3.예금  4.출금   5.종료  ");
 			System.out.println("-----------------------------------");
 			System.out.println("선택> ");
 			int menu = scn.nextInt();
