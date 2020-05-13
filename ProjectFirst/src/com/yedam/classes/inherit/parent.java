@@ -4,8 +4,7 @@ public class parent {
 	private String lastName;
 	private String firstName;
 	private String telNumber; 
-	
-	public parent() {
+	protected parent() {
 		
 	}
 	public parent(String lastName, String firstName, String telNumber) {
@@ -25,7 +24,7 @@ public class parent {
 	protected  String getFirstName() {
 		return firstName;
 	}
-	protected  void setFirstName(String firstName) {
+	protected void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 	
