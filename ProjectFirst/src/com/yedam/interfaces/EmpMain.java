@@ -36,7 +36,7 @@ public class EmpMain {
 				int empId = scn.nextInt();
 				System.out.println("급여입력");
 				int salary = scn.nextInt();
-				
+
 				Employee emp = new Employee(empId, " ", salary, "");
 				service.changeEmp(emp);
 			} else if (menu == 4) { // 4.삭제
@@ -46,7 +46,7 @@ public class EmpMain {
 			} else if (menu == 5) { // 5.종료
 				break;
 			}
-			
+
 		} // while
 		System.out.println("프로그램 종료");
 	} // main

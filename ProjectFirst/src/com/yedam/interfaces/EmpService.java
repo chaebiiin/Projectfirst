@@ -10,4 +10,6 @@ public interface EmpService { // 기능정의
 	public void changeEmp(Employee emp);
 	//	삭제
 	public void removeEmp(int empId);	
+	
+	
 }

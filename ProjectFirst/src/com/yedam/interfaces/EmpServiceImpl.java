@@ -1,6 +1,6 @@
 package com.yedam.interfaces;
 
-public class EmpServiceImpl implements EmpService {
+public class EmpServiceImpl implements EmpService { // 정의 되어 있는 값을 구현해줘야 함.
 	EmpDAO dao = new EmpDAO();
 
 	@Override
