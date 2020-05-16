@@ -1,4 +1,4 @@
-package com.yedam;
+package com.yedam.morning;
 
 public class exceptions { //예외처리
 	public static void main(String[] args) {

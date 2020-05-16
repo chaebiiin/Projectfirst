@@ -1,12 +1,13 @@
 package com.yedam.interfaces;
 
 public class Employee {
-	//필드
+	// 필드
 	private int employeeId;
 	private String lastName;
 	private int salary;
 	private String hireDate;
-	//생성자
+
+	// 생성자
 	public Employee(int employeeId, String lastName, int salary, String hireDate) {
 		super();
 		this.employeeId = employeeId;
@@ -14,7 +15,8 @@ public class Employee {
 		this.salary = salary;
 		this.hireDate = hireDate;
 	}
-	//get/set 메소드
+
+	// get/set 메소드
 	public int getEmployeeId() {
 		return employeeId;
 	}
@@ -46,10 +48,10 @@ public class Employee {
 	public void setHireDate(String hireDate) {
 		this.hireDate = hireDate;
 	}
-	@Override
+
+	@Override // source-> Generate toString()
 	public String toString() {
-		return "Employee [employeeId = " + employeeId + ", lastName = " + lastName + ", salary = " + salary + ", hireDate = "
-				+ hireDate + " ]";
+		return "Employee [employeeId = " + employeeId + ", lastName = " + lastName + ", salary = " + salary
+				+ ", hireDate = " + hireDate + " ]";
 	}
-	
 }
