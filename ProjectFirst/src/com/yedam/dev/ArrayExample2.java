@@ -3,7 +3,7 @@ package com.yedam.dev;
 public class ArrayExample2 {
 	public static void main(String[] args) {
 		// System.out.println(getLargeValue(10,20, 15));
-		// System.out.println(getLargeValue(new int[] {52,6,2,9,10}));
+		 System.out.println(getLargeValue(new int[] {52,6,2,9,10}));
 		// String result = getString("Hello", "World");
 		// System.out.println(result);
 		// String[] ary = { "Lee", "Kim", "Park", "Choi", "Han" };
