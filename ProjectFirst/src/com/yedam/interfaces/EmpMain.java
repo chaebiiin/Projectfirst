@@ -39,6 +39,7 @@ public class EmpMain {
 
 				Employee emp = new Employee(empId, " ", salary, "");
 				service.changeEmp(emp);
+				
 			} else if (menu == 4) { // 4.삭제
 				System.out.println("삭제 할 사원번호");
 				int empId = scn.nextInt();

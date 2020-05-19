@@ -48,7 +48,7 @@ public class DeptDAO { // DB를 처리하는 클래스
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				Departments dept = new Departments(rs.getInt("department_id"), rs.getString("department_name"), rs.getInt("lacation_id"));
+				Departments dept = new Departments(rs.getInt("department_id"), rs.getString("department_name"), rs.getInt("location_id"));
 				departments[i++] = dept;
 			}
 		} catch (SQLException e) {
@@ -63,6 +63,8 @@ public class DeptDAO { // DB를 처리하는 클래스
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, dept.getDepartmentId());
 			pstmt.setString(2, dept.getDepartmentName());
+			int r = pstmt.executeUpdate();
+			System.out.println(r + "건 변경됨");
 		} catch
 		(SQLException e) {
 			e.printStackTrace();
