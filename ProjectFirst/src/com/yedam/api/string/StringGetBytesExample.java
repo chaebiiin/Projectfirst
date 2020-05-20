@@ -7,7 +7,7 @@ public class StringGetBytesExample {
 		byte[] bytes1 = str.getBytes();
 		byte[] bytes2 = str1.getBytes();
 		System.out.println("bytes.length : " + bytes1.length);
-		System.out.println("bytes.length : " + bytes1.length);
+		System.out.println("bytes.length : " + bytes2.length);
 
 	}
 }
