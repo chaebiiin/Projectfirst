@@ -36,9 +36,8 @@ public class DeptMain {
 				int deptId = scn.nextInt();
 				System.out.println("부서이름을 입력하세요.");
 				String departmentName = scn.nextLine();
-//				오류!!!!!
-//				Departments dept = new Departments(DepartmentId, " ", departmentName, " ");
-//				service.changeDept(dept);
+				Departments dept = new Departments(deptId, " ", departmentName, " ");
+				service.changeDept(dept);
 
 			} else if (menu == 4) {
 				System.out.println("삭제 할 부서번로를 입력하세요.");
