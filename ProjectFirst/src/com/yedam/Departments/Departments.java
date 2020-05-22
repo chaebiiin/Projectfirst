@@ -13,7 +13,10 @@ public class Departments { //필드
 		this.departmentName = departmentName;
 		this.locationId = locationId;
 	}
-//	public Departments(int deptId, String string, String departmentName2, String string2) {
+	public Departments(int deptId, String string, String departmentName2, String string2) {
+		// TODO Auto-generated constructor stub
+	}
+	//	public Departments(int deptId, String string, String departmentName2, String string2) {
 //	}
 	//get&set 메소드 -> source-> Generate getters & setters
 	public int getDepartmentId() {
