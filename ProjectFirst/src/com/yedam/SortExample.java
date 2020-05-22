@@ -22,9 +22,9 @@ public class SortExample {
 		}
 		System.out.println();
 		
-		Member m1 = new Member("김");
-		Member m2 = new Member ("최");
-		Member m3 = new Member("박");
+		 Member m1 = new  Member("김");
+		 Member m2 = new Member ("최");
+		Member m3 = new  Member("박");
 		
 		Member[] members = {m1, m2, m3};
 		Arrays.sort(members);

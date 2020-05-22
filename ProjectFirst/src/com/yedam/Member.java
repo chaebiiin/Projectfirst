@@ -1,6 +1,7 @@
 package com.yedam;
 
-public class Member implements Comparable<Member> {
+public class  Member implements Comparable<Member> {
+	
 	
 		String name;
 		Member(String name) {
