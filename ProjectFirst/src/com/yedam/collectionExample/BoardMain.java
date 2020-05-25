@@ -31,18 +31,21 @@ public class BoardMain {
 				System.out.println(brd);
 			} 
 			} else if (menu == 2) { //수정
-				       
-				
+			
+				     	
 			} else if (menu == 3) { //삭제
+				System.out.println("삭제 할 글 제목을 입력하세요.");
+				String Title = scn.nextLine();
+				service.removeBoard(list, Title);
 				
-			} else if (menu == 4) { //리슽트
-				
+			} else if (menu == 4) { //리스트
+			 service.getBoardList(board);
+			 
 			} else if (menu == 5) { //종료
 				break;
 			}
 			
-//			scn.close();
-			
+//			scn.close();			
 		} //wile
 		System.out.println("프로그램 종료.");
 	} // main

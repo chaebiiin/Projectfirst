@@ -32,7 +32,7 @@ public class Board { //필드
 
 	@Override
 	public String toString() {
-		return "Board [글 제목 :" + title + ", 내 용 : " + content + ", 작성자 : " + writer + "]";
+		return "게시판 <글 제목 :" + title + ", 내 용 : " + content + ", 작성자 : " + writer + ">";
 	}
 	
 }
