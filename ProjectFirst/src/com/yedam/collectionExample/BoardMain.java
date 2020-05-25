@@ -5,18 +5,18 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BoardMain {
+
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		List<Board> list = new ArrayList<>();
-
 		BoardService service = new BoardServiceLmpl();
+		
 		while (true) {
 			System.out.println("----------------------------------------");
 			System.out.println("1.제목 입력  2.내용 수정  3.삭제  4.전체리스트   5.종료  ");
 			System.out.println("-----------------------------------------");
 			System.out.println("선택> ");
-			int menu = scn.nextInt();
-			scn.nextLine();
+			int menu = scn.nextInt(); scn.nextLine();
 			if (menu == 1) {
 			System.out.println("제목을 입력하세요.");
 			String title = scn.nextLine();
@@ -34,8 +34,11 @@ public class BoardMain {
 				       
 				
 			} else if (menu == 3) { //삭제
+				System.out.println("삭제 할 글 제목");
+				String Title = scn.nextLine();
+				service.removeBoard(list, board);
 				
-			} else if (menu == 4) { //리슽트
+			} else if (menu == 4) { //리스트
 				
 			} else if (menu == 5) { //종료
 				break;
