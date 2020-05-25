@@ -36,7 +36,7 @@ public class DeptMain {
 				int departmentId = scn.nextInt();
 				System.out.println("부서이름을 입력하세요.");
 				String departmentName = scn.nextLine();
-				Departments dept = new Departments(deptId, " ", departmentName, " ");
+				Departments dept = new Departments(departmentId, " ", departmentName, " ");
 				service.changeDept(dept);
 
 			} else if (menu == 4) {
