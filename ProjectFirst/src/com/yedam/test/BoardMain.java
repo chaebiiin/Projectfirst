@@ -1,21 +1,22 @@
-package com.yedam.collectionExample;
+package com.yedam.test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class BoardMain {
-
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		List<Board> list = new ArrayList<>();
-		BoardService service = new BoardServiceLmpl();
+		
+		BoardService service = new BoardServiceImpl2();
 		
 		while (true) {
 			System.out.println("----------------------------------------");
 			System.out.println("1.제목 입력  2.내용 수정  3.삭제  4.전체리스트   5.종료  ");
 			System.out.println("-----------------------------------------");
 			System.out.println("선택> ");
+			
 			int menu = scn.nextInt(); scn.nextLine();
 			if (menu == 1) {
 			System.out.println("제목을 입력하세요.");
@@ -31,14 +32,21 @@ public class BoardMain {
 				System.out.println(brd);
 			} 
 			} else if (menu == 2) { //수정
-				       
+				System.out.println("제목입력");
+				String title = scn.nextLine();
+				System.out.println("변경내용 입력");
+				String content = scn.nextLine();
+				Board board = new Board(title, content, null);
+				service.changeBoard(list, board);
 				
+			
 			} else if (menu == 3) { //삭제
 				System.out.println("삭제 할 글 제목");
 				String Title = scn.nextLine();
-				service.removeBoard(list, board);
+				service.removeBoard(list, Title);
 				
 			} else if (menu == 4) { //리스트
+				service.showBoard(list);
 				
 			} else if (menu == 5) { //종료
 				break;
