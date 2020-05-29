@@ -1,4 +1,4 @@
-package com.yedam;
+package com.yedam.test;
 
 public class  Member implements Comparable<Member> {
 	

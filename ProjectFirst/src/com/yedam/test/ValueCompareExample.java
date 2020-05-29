@@ -1,4 +1,4 @@
-package com.yedam;
+package com.yedam.test;
 //기본값 비교????
 public class ValueCompareExample {
 	public static void main(String[] args) {

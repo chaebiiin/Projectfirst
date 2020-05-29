@@ -1,4 +1,4 @@
-package com.yedam;
+package com.yedam.test;
 
 public class StringToPrimitiveValueExample {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.yedam;
+package com.yedam.test;
 
 public class BoxingUnBoxingExample {
 	public static void main(String[] args) {
