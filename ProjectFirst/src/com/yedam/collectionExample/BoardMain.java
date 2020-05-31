@@ -39,7 +39,7 @@ public class BoardMain {
 				service.removeBoard(list, Title);
 				
 			} else if (menu == 4) { //리스트
-			 service.getBoardList(board);
+//			 service.getBoardList(board);
 			 
 			} else if (menu == 5) { //종료
 				break;
