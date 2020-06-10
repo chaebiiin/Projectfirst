@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="540.0" prefWidth="700.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.yedam.question_java.QuizController">
+	<children>
+
+		<Label alignment="CENTER" contentDisplay="CENTER"
+			layoutX="250.0" layoutY="39.0" prefHeight="50.0" prefWidth="200.0"
+			text="SQL 기출 문제 " textAlignment="CENTER"
+			textOverrun="CENTER_WORD_ELLIPSIS">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+
+		<Label fx:id="quiz" alignment="CENTER" layoutX="87.0"
+			layoutY="110.0" prefHeight="129.0" prefWidth="560.0"
+			textOverrun="CENTER_ELLIPSIS">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Label>
+
+
+		<Pane layoutX="51.0" layoutY="245.0" prefHeight="195.0"
+			prefWidth="598.0">
+			<children>
+				<fx:define>
+					<ToggleGroup fx:id="group" />
+				</fx:define>
+
+				<Label fx:id="select1" layoutX="19.0" layoutY="14.0"
+					prefHeight="50.0" prefWidth="560.0">
+					<graphic>
+						<RadioButton mnemonicParsing="false"
+							toggleGroup="$group" />
+					</graphic>
+
+				</Label>
+
+				<Label fx:id="select2" layoutX="19.0" layoutY="75.0"
+					prefHeight="50.0" prefWidth="560.0">
+					<graphic>
+						<RadioButton mnemonicParsing="false"
+							toggleGroup="$group" />
+					</graphic>
+				</Label>
+
+				<Label fx:id="select3" layoutX="19.0" layoutY="134.0"
+					prefHeight="50.0" prefWidth="560.0">
+					<graphic>
+						<RadioButton mnemonicParsing="false"
+							toggleGroup="$group" />
+					</graphic>
+				</Label>
+
+			</children>
+
+		</Pane>
+
+		<Separator layoutX="40.0" layoutY="459.0" prefHeight="5.0"
+			prefWidth="623.0" />
+		<Button fx:id="btnOk" layoutX="273.0" layoutY="486.0"
+			mnemonicParsing="false" onAction="#handleBtnOkAction" text="확인" />
+		<Button layoutX="381.0" layoutY="487.0" mnemonicParsing="false"
+			onAction="#handleBtnCancelAction" text="취소" />
+
+	</children>
+</AnchorPane>
