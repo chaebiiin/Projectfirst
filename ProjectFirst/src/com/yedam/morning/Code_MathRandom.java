@@ -1,6 +1,6 @@
 package com.yedam.morning;
 
-public class f {
+public class Code_MathRandom {
 	public void changeSelect() {
 		int[] intAry = new int[5];
 		int temp = 0;

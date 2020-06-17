@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.util.Random;
 import java.util.ResourceBundle;
 
+import com.yedam.classes.Student;
+
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -28,6 +30,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -35,14 +38,17 @@ import javafx.stage.StageStyle;
 public class QuizController implements Initializable {
 	Connection conn;
 	int numi = 1;
-
+	ObservableList<Quiz> list = FXCollections.observableArrayList();
 	@FXML
 	Button btnOk, btnNext, btnClose;
 	@FXML
 	Label quiz;
 	@FXML
 	Label select1, select2, select3;
-
+	@FXML 
+	VBox answerlist;
+	ObservableList<Quiz> explain;
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		try {
@@ -50,18 +56,25 @@ public class QuizController implements Initializable {
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-
+		}		
+		explain = FXCollections.observableArrayList();
+		
+		btnOk.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				btnOkAction(event);
+			}		
+		});		
+		
 		quiz.setText(getQuizList().get(0).getQuiz());
 		select1.setText(getQuizList().get(0).getSelect1());
 		select2.setText(getQuizList().get(0).getSelect2());
 		select3.setText(getQuizList().get(0).getSelect3());
-
-
+		
 	}
 
 	public ObservableList<Quiz> getQuizList() {
-		ObservableList<Quiz> list = FXCollections.observableArrayList();
+		
 		Random random = new Random();
 		numi = random.nextInt(5) + 1;
 		String sql = "select *  from question where num =" + numi;
@@ -82,11 +95,30 @@ public class QuizController implements Initializable {
 	}
 
 
-	public void handleBtnOkAction(ActionEvent ae) {
+	public void btnOkAction(ActionEvent ae) {
 		Stage addStage = new Stage(StageStyle.UTILITY);
 		addStage.initModality(Modality.WINDOW_MODAL);
 		addStage.initOwner(btnOk.getScene().getWindow());
-
+		
+		try {
+			Parent parent = FXMLLoader.load(getClass().getResource("Answer.fxml"));
+			Scene scene = new Scene(parent);
+			addStage.setScene(scene);
+			addStage.setResizable(false);
+			addStage.show();
+			
+			Button btnNext = (Button) parent.lookup("#btnNext");
+			btnNext.setOnAction(new EventHandler<ActionEvent>() {
+				
+				@Override
+				public void handle(ActionEvent arg0) {
+					VBox answerlist = (VBox) parent.lookup("#answerlist");
+				}
+				
+			});
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void handleBtnCancelAction(ActionEvent e) {
